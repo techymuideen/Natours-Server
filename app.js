@@ -71,6 +71,22 @@ app.use((req, res, next) => {
 // 3) ROUTES
 app.get('/', (req, res) => {
   res.status(200).render('base', {
+    title: 'The Forest Hiker',
+    users: 'Muideen Popoola',
+  });
+});
+
+app.get('/overview', (req, res) => {
+  res.status(200).render('overview', {
+    title: 'All Tours',
+    tours: 'The Forest Hiker',
+    users: 'Muideen Popoola',
+  });
+});
+
+app.get('/tour', (req, res) => {
+  res.status(200).render('tour', {
+    title: 'The Forest Hiker',
     tours: 'The Forest Hiker',
     users: 'Muideen Popoola',
   });
