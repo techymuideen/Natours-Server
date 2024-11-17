@@ -123,6 +123,7 @@ body {
   );
   background-image: linear-gradient(to right, #7dd56f, #28b487);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 0.1rem;
   line-height: 1.3;
@@ -607,7 +608,15 @@ body {
   overflow-x: scroll;
   -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
+
+.reviews::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .reviews__card {
   width: 30rem;
   padding: 4rem;
@@ -1198,6 +1207,7 @@ body {
   transform: translate(-50%, -50%);
   max-width: 80rem;
   text-align: center;
+  display: contents;
 }
 .error__title {
   display: -webkit-box;

@@ -1,10 +1,10 @@
 extends base
 
 block content
-  main.main 
-    .card-container 
-
-      each tour in tours 
+  main.main
+    .card-container
+    
+      each tour in tours
         .card
           .card__header
             .card__picture
@@ -27,7 +27,6 @@ block content
             .card__data
               svg.card__icon
                 use(xlink:href='/img/icons.svg#icon-flag')
-              |       
               span= `${tour.locations.length} stops`
             .card__data
               svg.card__icon
